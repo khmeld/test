@@ -1,86 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru" >
 <head>
+  <meta charset="UTF-8">
+  <title>Колесо удачи</title>
+  <!-- используем всю ширину экрана -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Tinder-like Window</title>
-<style>
-  *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-  body{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 200;
-  color: var(--tg theme-text-color);
-  background-color:var(--tg theme-bg-color);
-}
-#main{
-  width: 100%;
-  padding: 20px;
-  text-align: center;
-}
-h1{
-  margin-top: 50px;
-  margin-bottom: 10px;
-}
-img{
-  width: 100%;
-  margin: 30px auto;
-}
-p{
-  width: 350px;
-  margin: 0 auto;
-}
-.button-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Две колонки равной ширины */
-  grid-gap: 1px; /* Расстояние между кнопками */
-  justify-items: center;
-}
-#like {
-  border: 0;
-  border-radius: 5px;
-  margin-top: 50px;
-  height: 60px;
-  width: 200px;
-  font-size: 20px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 500ms ease;
-  color: var(--tg-theme-button-color);
-  background:rgb(27, 156, 27);
-}
-#dislike {
-  border: 0;
-  border-radius: 5px;
-  margin-top: 50px;
-  height: 60px;
-  width: 200px;
-  font-size: 20px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 500ms ease;
-  color: var(--tg-theme-button-color);
-  background:rgb(201, 17, 17);
-}
+  <!-- подключаем стили -->
+  <link rel="stylesheet" href="style.css">
 
-button:hover{
-  background:var(--tg-theme-secondary-bg-color);
-}
-</style>
 </head>
 <body>
-  <div id="main">
-    <h1>Tinder</h1>
-    <img src="OIG4.We.jpg">
-  
-    <div class="button-container">
-      <button id="dislike">Dislike</button>
-      <button id="like">Like</button>
-    </div>
-    
-  </div>
-  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+<!-- главный блок -->
+<div class="deal-wheel">
+  <!-- блок с призами -->
+  <ul class="spinner"></ul>
+  <!-- язычок барабана -->
+  <div class="ticker"></div>
+  <!-- кнопка -->
+  <button class="btn-spin">Испытай удачу</button>
+</div>
+  <!-- подключаем скрипт -->
+  <script  src="script.js"></script>
+
 </body>
 </html>
