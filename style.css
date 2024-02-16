@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
   box-sizing: border-box;
+
   
 }
 
@@ -14,6 +15,8 @@ body {
   place-items: center;
   /* если что-то не помещается на своё место — скрываем то, что не поместилось */
   overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #222225;
 }
 
 /* общий блок для всех элементов */
@@ -110,12 +113,14 @@ body {
   height: calc(var(--size) / 20);
   /* фон язычка */
   background: var(--lg);
+
   /* делаем так, чтобы язычок был выше колеса */
   z-index: 1;
   /* форма язычка */
   clip-path: polygon(20% 0, 100% 50%, 20% 100%, 0% 50%);
   /* устанавливаем точку, относительно которой будет вращаться язычок при движении колеса */
   transform-origin: center left;
+
 }
 
 /* кнопка запуска колеса */
@@ -153,8 +158,10 @@ body {
 
 #balance{
     color: var(--tg-theme-text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-bottom: 20px;
     margin-top: 20px;
+    color: white;
 }
 /* эффект, когда колесо задевает язычок при вращении */
 @keyframes tick {
