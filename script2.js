@@ -1,6 +1,6 @@
 let tg = window.Telegram.WebApp;
 let balance = 10000
-document.getElementById("balance").textContent = "Balance: " + balance
+document.getElementById("balance").textContent = "Balance: " + balance + "   " + tg.initDataUnsafe.user_id
 
 let btnred = document.getElementById("btn-red");
 let btngreen = document.getElementById("btn-green");
@@ -23,7 +23,7 @@ document.addEventListener("click", function(event) {
   
 
 function bred(){
-    if (isNaN(parseFloat(document.getElementById("inputbet").value)) || parseFloat(document.getElementById("inputbet").value) === '') {
+    if (isNaN(parseFloat(document.getElementById("inputbet").value)) || parseFloat(document.getElementById("inputbet").value) === '' || parseFloat(document.getElementById("inputbet").value)<=0) {
         
         return; 
     }
@@ -39,7 +39,7 @@ function bred(){
 }
 
 function bgreen(){
-    if (isNaN(parseFloat(document.getElementById("inputbet").value)) || parseFloat(document.getElementById("inputbet").value) === '') {
+    if (isNaN(parseFloat(document.getElementById("inputbet").value)) || parseFloat(document.getElementById("inputbet").value) === '' || parseFloat(document.getElementById("inputbet").value)<=0) {
         
         return; 
     }
@@ -54,7 +54,7 @@ function bgreen(){
 }
 
 function bblack(){
-    if (isNaN(parseFloat(document.getElementById("inputbet").value)) || parseFloat(document.getElementById("inputbet").value) === '') {
+    if (isNaN(parseFloat(document.getElementById("inputbet").value)) || parseFloat(document.getElementById("inputbet").value) === '' || parseFloat(document.getElementById("inputbet").value)<=0) {
         
         return; 
     }
