@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
   box-sizing: border-box;
+  
 }
 
 /* общие настройки страницы */
@@ -12,7 +13,7 @@ body {
   /* ставим всё по центру */
   place-items: center;
   /* если что-то не помещается на своё место — скрываем то, что не поместилось */
-  overflow: hidden;
+  overflow-y: auto;
 }
 
 /* общий блок для всех элементов */
@@ -119,15 +120,15 @@ body {
 
 /* кнопка запуска колеса */
 .btn-spin {
-  color: var(--tg-theme-button-text-color);
-  background: var(--tg-theme-button-color);
+  color: white;
+  background: #2AABEE;
   border: none;
   /* берём размер шрифта такой же, как в колесе */
   font-size: inherit;
   /* добавляем отступы от текста внутри кнопки */
   padding: 0.9rem 2rem 1rem;
   /* скругляем углы */
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   /* меняем внешний вид курсора над кнопкой на руку*/
   cursor: pointer;
 }
@@ -137,7 +138,7 @@ body {
   /* меняем внешний вид курсора */
   cursor: progress;
   /* делаем кнопку полупрозрачной */
-  opacity: 0.25;
+  opacity: 0.5;
 }
 
 /* анимация вращения */
@@ -150,7 +151,11 @@ body {
           animation: tick 700ms cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-
+#balance{
+    color: var(--tg-theme-text-color);
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
 /* эффект, когда колесо задевает язычок при вращении */
 @keyframes tick {
   40% {
