@@ -10,6 +10,17 @@ let betred = 0;
 let betgreen = 0;
 let betblack = 0;
 
+var inputElement = document.getElementById('inputbet');
+
+
+
+document.addEventListener("click", function(event) {
+    var input = document.getElementById("inputbet");
+    if (!input.contains(event.target)) {
+      input.blur();
+    }
+  });
+  
 
 function bred(){
     if (isNaN(parseFloat(document.getElementById("inputbet").value)) || parseFloat(document.getElementById("inputbet").value) === '') {
@@ -56,5 +67,4 @@ function bblack(){
     document.getElementById("balance").textContent = "Balance: " + balance
     
 }
-
 
