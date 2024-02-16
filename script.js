@@ -60,17 +60,22 @@ const prizes = [
         color: "#393939",
       }
   ];
+  const finish = [0, 4, 12, 3, 13, 2, 14, 1, 8, 7, 9, 6, 10, 5, 11];
+
   
+
   // создаём переменные для быстрого доступа ко всем объектам на странице — блоку в целом, колесу, кнопке и язычку
   const wheel = document.querySelector(".deal-wheel");
+ 
   const spinner = wheel.querySelector(".spinner");
   const trigger = wheel.querySelector(".btn-spin");
+
   const ticker = wheel.querySelector(".ticker");
   
   // на сколько секторов нарезаем круг
   const prizeSlice = 360 / prizes.length;
   // на какое расстояние смещаем сектора друг относительно друга
-  const prizeOffset = Math.floor(180 / prizes.length);
+  const prizeOffset = Math.floor(180 / prizes.length+1);
   // прописываем CSS-классы, которые будем добавлять и убирать из стилей
   const spinClass = "is-spinning";
   const selectedClass = "selected";
@@ -167,12 +172,33 @@ const prizes = [
   const selectPrize = () => {
     const selected = Math.floor(rotation / prizeSlice);
     prizeNodes[selected].classList.add(selectedClass);
+    if(finish[selected] == 0){
+    balance+=betgreen*14;
+    document.getElementById("balance").textContent = "Balance: " + balance
+    }
+    if(finish[selected] > 7 && finish[selected]<=14){
+        balance+=betblack*14;
+        document.getElementById("balance").textContent = "Balance: " + balance
+        }
+    if(finish[selected] > 0 && finish[selected]<=7){
+    balance+=betred*2;
+    document.getElementById("balance").textContent = "Balance: " + balance
+    }
+    betblack = 0;
+    betgreen = 0;
+    betred = 0;
+    document.getElementById("inputbet").value = 0;
+    //alert(finish[selected])
+    //alert(betblack)
   };
   
   // отслеживаем нажатие на кнопку
   trigger.addEventListener("click", () => {
     // делаем её недоступной для нажатия
     trigger.disabled = true;
+    document.getElementById("btn-green").disabled = true;
+    document.getElementById("btn-black").disabled = true;
+    document.getElementById("btn-red").disabled = true;
     // задаём начальное вращение колеса
     rotation = Math.floor(Math.random() * 360 + spinertia(2000, 5000));
     // убираем прошлый приз
@@ -201,7 +227,12 @@ const prizes = [
     spinner.style.setProperty("--rotate", rotation);
     // делаем кнопку снова активной
     trigger.disabled = false;
+    document.getElementById("btn-green").disabled = false;
+    document.getElementById("btn-black").disabled = false;
+    document.getElementById("btn-red").disabled = false;
   });
   
   // подготавливаем всё к первому запуску
   setupWheel();
+
+  
