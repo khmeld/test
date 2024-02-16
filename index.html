@@ -24,15 +24,15 @@
   <!-- подключаем скрипт -->
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
   <script  src="script.js"></script>
-  <h1 id="balance">Balance: 50000 </h1>
+  <h1 id="balance">Привет</h1>
   <script  src="script2.js"></script>
 
   
-	<input type="number" name="focus" required class="search-box" placeholder="YOUR BET..." />
+	<input type="number" id = "inputbet" required class="search-box" placeholder="YOUR BET..." />
     <div class="playbtn">
-    <button class="btn-red">RED</button>
-    <button class="btn-green">GREEN</button>
-    <button class="btn-black">BLACK</button>
+    <button id="btn-red" onclick="bred()">RED</button>
+    <button id="btn-green" onclick="bgreen()">GREEN</button>
+    <button id="btn-black" onclick="bblack()">BLACK</button>
     </div>	
 	
 </div>
