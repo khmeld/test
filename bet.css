@@ -1,0 +1,57 @@
+.search-box {
+   
+	width: 25%;
+    height: 200%;
+	border: 1px solid #ccc;
+    text-indent: 10px;
+  border-radius: 5px;
+  
+}
+
+.playbtn{
+    margin-top: 30px;
+    width: 50%;
+    display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 25px; /* Устанавливаем равное пространство между элементами */
+}
+.btn-red{
+    color: white;
+    background: #D4594C;
+    border: none;
+    /* берём размер шрифта такой же, как в колесе */
+    font-size: inherit;
+    /* добавляем отступы от текста внутри кнопки */
+    padding: 0.9rem 2rem 1rem;
+    /* скругляем углы */
+    border-radius: 1rem;
+    /* меняем внешний вид курсора над кнопкой на руку*/
+    cursor: pointer;
+}
+.btn-green{
+    color: white;
+    background: #5EB76E;
+    width: 100%;
+    border: none;
+    /* берём размер шрифта такой же, как в колесе */
+    font-size: inherit;
+    /* добавляем отступы от текста внутри кнопки */
+    padding: 0.9rem 2rem 1rem;
+    /* скругляем углы */
+    border-radius: 1rem;
+    /* меняем внешний вид курсора над кнопкой на руку*/
+    cursor: pointer;
+}
+.btn-black{
+    color: white;
+    background: #393939;
+    border: none;
+    /* берём размер шрифта такой же, как в колесе */
+    font-size: inherit;
+    /* добавляем отступы от текста внутри кнопки */
+    padding: 0.9rem 2rem 1rem;
+    /* скругляем углы */
+    border-radius: 1rem;
+    /* меняем внешний вид курсора над кнопкой на руку*/
+    cursor: pointer;
+}
