@@ -33,7 +33,7 @@ function bred(){
     
     betred += parseFloat(document.getElementById("inputbet").value)
     balance-=parseFloat(document.getElementById("inputbet").value)
-    document.getElementById("balance").textContent =tg.initDataUnsafe.id
+    document.getElementById("balance").textContent = tg.initDataUnsafe.user.id
     
   
 }
