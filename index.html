@@ -12,7 +12,7 @@
   body{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 200;
-    color: var(--tg theme-text-color);
+  color: var(--tg theme-text-color);
   background-color:var(--tg theme-bg-color);
 }
 #main{
@@ -32,7 +32,13 @@ p{
   width: 350px;
   margin: 0 auto;
 }
-button {
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Две колонки равной ширины */
+  grid-gap: 1px; /* Расстояние между кнопками */
+  justify-items: center;
+}
+#like {
   border: 0;
   border-radius: 5px;
   margin-top: 50px;
@@ -43,7 +49,20 @@ button {
   cursor: pointer;
   transition: all 500ms ease;
   color: var(--tg-theme-button-color);
-  background:var(--tg-theme-button-text-color);
+  background:rgb(27, 156, 27);
+}
+#dislike {
+  border: 0;
+  border-radius: 5px;
+  margin-top: 50px;
+  height: 60px;
+  width: 200px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 500ms ease;
+  color: var(--tg-theme-button-color);
+  background:rgb(201, 17, 17);
 }
 
 button:hover{
@@ -55,8 +74,12 @@ button:hover{
   <div id="main">
     <h1>Tinder</h1>
     <img src="OIG4.We.jpg">
-    <p>Lorem ipsum dolor sit amen</p>
-    <button id="like">Like</button>
+  
+    <div class="button-container">
+      <button id="dislike">Dislike</button>
+      <button id="like">Like</button>
+    </div>
+    
   </div>
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </body>
