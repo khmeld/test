@@ -1,6 +1,6 @@
 let tg = window.Telegram.WebApp;
 let balance = 10000
-document.getElementById("balance").textContent =" d "+ tg.initDataUnsafe.id
+document.getElementById("balance").textContent = "Balance: " + balance 
 
 let btnred = document.getElementById("btn-red");
 let btngreen = document.getElementById("btn-green");
@@ -33,7 +33,7 @@ function bred(){
     
     betred += parseFloat(document.getElementById("inputbet").value)
     balance-=parseFloat(document.getElementById("inputbet").value)
-    document.getElementById("balance").textContent = "Balance: " + balance
+    document.getElementById("balance").textContent =tg.initDataUnsafe.id
     
   
 }
