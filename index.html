@@ -2,21 +2,61 @@
 <html>
 <head>
   <title>Tinder-like Window</title>
-  <link rel="stylesheet" href="styles.css">
+<style>
+  *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+  body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 200;
+    color: var(--tg theme-text-color);
+  background-color:var(--tg theme-bg-color);
+}
+#main{
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+h1{
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+img{
+  width: 70px;
+  margin: 30px auto;
+}
+p{
+  width: 350px;
+  margin: 0 auto;
+}
+button {
+  border: 0;
+  border-radius: 5px;
+  margin-top: 50px;
+  height: 60px;
+  width: 200px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 500ms ease;
+  color: var(--tg-theme-button-color);
+  background:var(--tg-theme-button-text-color);
+}
+
+button:hover{
+  background:var(--tg-theme-secondary-bg-color);
+}
+</style>
 </head>
 <body>
-  <div class="card">
-    <div class="card-image">
-      <img src="OIG4.We.jpg" alt="Profile Image">
-    </div>
-    <div class="card-content">
-      <h2 class="profile-name">Имя пользователя</h2>
-      <p class="profile-description">Описание пользователя</p>
-    </div>
-    <div class="card-actions">
-      <button class="dislike-button">Dislike</button>
-      <button class="like-button">Like</button>
-    </div>
+  <div id="main">
+    <h1>Tinder</h1>
+    <img src="OIG4.We.jpg">
+    <p>Lorem ipsum dolor sit amen</p>
+    <button id="like">Like</button>
   </div>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </body>
 </html>
