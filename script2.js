@@ -1,6 +1,6 @@
 let tg = window.Telegram.WebApp;
 let balance = 10000
-document.getElementById("balance").textContent =tg.initDataUnsafe.id
+document.getElementById("balance").textContent =" d "+ tg.initDataUnsafe.id
 
 let btnred = document.getElementById("btn-red");
 let btngreen = document.getElementById("btn-green");
