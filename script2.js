@@ -1,2 +1,2 @@
 let tg = window.Telegram.WebApp;
-document.getElementById("balance").textContent = "Balance:  "
+document.getElementById("balance").textContent = "Balance: 50000 "
